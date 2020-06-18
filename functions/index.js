@@ -141,3 +141,31 @@ exports.onarFinalize = functions.storage.object().onFinalize ((object)=>{
 exports.Metadataupdate = functions.storage.object().onMetadataUpdate((object)=>{
     console.info("metadata changed");
 })
+
+exports.recomend = functions.https.onCall((data,context)=>{
+        // take the two array
+        // this is the senario that 
+        // we assume this come with two different list
+        var intensity = data.intensity; // list
+        var duration  = data.duration; // list
+        
+});
+
+
+
+
+
+// exports.addPerson = functions.https.onCall((data,context)=>{
+//     var firstName = data.firstName;
+//     var lastName = data.lastName;
+//     return admin.database().ref('/Person').push({
+//         firstName:firstName,
+//         lastName:lastName,
+//         fullName: firstName+ " "+lastName 
+//     }).then(()=>{
+//         console.log("Data is saved");
+//         this.date();
+//         return "OK"
+        
+//     })
+// });
