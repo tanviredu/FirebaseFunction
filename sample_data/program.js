@@ -4,7 +4,7 @@ const json = require('./data1');
 // PART1 DONE
 duration = []
 intensity = []
-tmp=[]
+//tmp=[]
 
 for (var i=0;i<json.length;i++){
     var obj = json[i];
@@ -14,7 +14,7 @@ for (var i=0;i<json.length;i++){
 
 
 function avg(data){
-    
+    tmp=[]
     for(var i=0;i<data.length;i++){
     var sum = data[i].reduce(function(a, b){
         return a + b;
@@ -35,7 +35,7 @@ function avg(data){
 //var intensity_list = 
 //var duration_list = avg(duration)
 
-//console.log(avg(intensity));
+console.log(avg(intensity));
 
 console.log(avg(duration))
 //console.log(duration_list);
